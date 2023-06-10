@@ -1,3 +1,3 @@
-function visualizar() {
-    
+function visualizar(pagina) {
+
 }
