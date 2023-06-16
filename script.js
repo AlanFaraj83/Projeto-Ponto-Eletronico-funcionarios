@@ -3,7 +3,9 @@ var listaRegistros = {
     usuario:[]
 }
 
-
+function insert() {
+    
+}
 
 
 function visualizar(pagina) {
