@@ -8,6 +8,10 @@ function insert() {
 }
 
 function edit() {
+
+}
+
+function delete() {
     
 }
 
