@@ -4,6 +4,10 @@ var listaRegistros = {
 }
 
 function insert() {
+
+}
+
+function edit() {
     
 }
 
