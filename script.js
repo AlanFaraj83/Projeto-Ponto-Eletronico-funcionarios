@@ -1,4 +1,9 @@
-function 
+var listaRegistros = {
+    UltimoIdGerado:0,
+    usuario:[]
+}
+
+
 
 
 function visualizar(pagina) {
