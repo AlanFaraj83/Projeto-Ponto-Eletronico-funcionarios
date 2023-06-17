@@ -3,15 +3,15 @@ var listaRegistros = {
     usuario:[]
 }
 
-function insert(Nome do funcionário) {
+function insertUsuario(Nome) {
+    listaRegistros.usuario.push()
+}
+
+function editUsuario(ID,Nome) {
 
 }
 
-function edit(ID,Nome do funcionario) {
-
-}
-
-function deleteData(ID) {
+function deleteUsuario(ID) {
 
 }
 
