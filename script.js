@@ -1,13 +1,21 @@
 var listaRegistros = {
     UltimoIdGerado:0,
-    usuarios:[]
+    usuarios:[
+        {id:1,nome:'Cassio'},
+        {id:2,nome:'Leandro'}
+
+    ]
 }
 
 
 function desenhar() {
     const tbody = document.getElementById("listaRegistrosBody")
     if(tbody) {
-        tbody.innerHTML = listaRegistros.usuarios.map(usuario => {
+        tbody.innerHTML = listaRegistros.usuarios
+        .sort((a, b) => {
+            return a.nome < b.nome ? -1 : 1
+        })
+        .map(usuario => {
             return `<tr>
                     <td>${usuario.id}</td>
                     <td>${usuario.nome}</td>
@@ -37,3 +45,7 @@ function visualizar(pagina) {
         document.getElementById("nome").focus()
     }
 }
+
+window.addEventListener('load', () => {
+    desenhar()
+})
