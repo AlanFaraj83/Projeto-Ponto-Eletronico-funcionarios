@@ -3,6 +3,10 @@ var listaRegistros = {
     usuario:[]
 }
 
+
+function desenhar {
+    
+}
 function insertUsuario(Nome) {
     const ID =listaRegistros.UltimoIdGerado + 1;
     listaRegistros.usuario.push({
