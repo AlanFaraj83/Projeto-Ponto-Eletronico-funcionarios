@@ -4,7 +4,10 @@ var listaRegistros = {
 }
 
 function insertUsuario(Nome) {
-    listaRegistros.usuario.push()
+    const ID =listaRegistros.UltimoIdGerado + 1;
+    listaRegistros.usuario.push({
+        ID,Nome
+    })
 }
 
 function editUsuario(ID,Nome) {
