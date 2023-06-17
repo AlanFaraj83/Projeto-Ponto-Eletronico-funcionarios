@@ -4,8 +4,8 @@ var listaRegistros = {
 }
 
 
-function desenhar {
-    
+function desenhar() {
+
 }
 function insertUsuario(Nome) {
     const ID =listaRegistros.UltimoIdGerado + 1;
