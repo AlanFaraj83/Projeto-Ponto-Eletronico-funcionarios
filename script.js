@@ -5,7 +5,10 @@ var listaRegistros = {
 
 
 function desenhar() {
+    const tbody = document.getElementById("listaRegistrosBody")
+    if(tbody) {
 
+    }
 }
 function insertUsuario(Nome) {
     const ID =listaRegistros.UltimoIdGerado + 1;
