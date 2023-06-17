@@ -10,19 +10,19 @@ function desenhar() {
         tbody.innerHTML = listaRegistros.usuarios.map(usuario => {
             return `<tr>
                     <td>${usuario.id}</td>
-                    <td>${usuario.Nome}</td>
+                    <td>${usuario.nome}</td>
                 </tr>`
         }).join('')
     }
 }
-function insertUsuario(Nome) {
+function insertUsuario(nome) {
     const ID =listaRegistros.UltimoIdGerado + 1;
     listaRegistros.usuarios.push({
-        ID,Nome
+        ID,nome
     })
 }
 
-function editUsuario(ID,Nome) {
+function editUsuario(ID,nome) {
 
 }
 
