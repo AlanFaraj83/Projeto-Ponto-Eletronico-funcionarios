@@ -1,18 +1,24 @@
 var listaRegistros = {
     UltimoIdGerado:0,
-    usuario:[]
+    usuarios:[]
 }
 
 
 function desenhar() {
     const tbody = document.getElementById("listaRegistrosBody")
     if(tbody) {
-
+        tbody.innerHTML = listaRegistros.usuarios.map(usuario => {
+            return `<tr>
+                    <td>${usuario}</td>
+                    <td></td>
+                    <td></td>
+                </tr>`
+        }).join('')
     }
 }
 function insertUsuario(Nome) {
     const ID =listaRegistros.UltimoIdGerado + 1;
-    listaRegistros.usuario.push({
+    listaRegistros.usuarios.push({
         ID,Nome
     })
 }
