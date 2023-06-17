@@ -9,9 +9,8 @@ function desenhar() {
     if(tbody) {
         tbody.innerHTML = listaRegistros.usuarios.map(usuario => {
             return `<tr>
-                    <td>${usuario}</td>
-                    <td></td>
-                    <td></td>
+                    <td>${usuario.id}</td>
+                    <td>${usuario.Nome}</td>
                 </tr>`
         }).join('')
     }
