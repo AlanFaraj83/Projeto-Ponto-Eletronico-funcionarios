@@ -46,10 +46,11 @@ function visualizar(pagina) {
     }
 }
 
-function submeter()
+function submeter(e) {
+    e.preventDefault()
+}
 
 window.addEventListener('load', () => {
     desenhar()
-
     document.getElementById('cadastroRegistro').addEventListener('submit',submeter)
 })
