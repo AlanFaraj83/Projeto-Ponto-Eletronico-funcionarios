@@ -48,6 +48,7 @@ function visualizar(pagina) {
 
 function submeter(e) {
     e.preventDefault()
+    alert('ok')
 }
 
 window.addEventListener('load', () => {
