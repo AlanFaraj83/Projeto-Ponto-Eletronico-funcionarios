@@ -59,7 +59,9 @@ function submeter(e) {
         voltalanche: document.getElementById('lunchback').value,
         saida: document.getElementById('timeout').value,
     }
-    if(data) {
+    if(data.id) {
+        
+    }else {
         
     }
 }
