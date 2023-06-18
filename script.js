@@ -34,7 +34,7 @@ function desenhar() {
                     <td>${usuario.voltalanche}</td>
                     <td>${usuario.saida}</td>
                     <td>
-                        <button class'amarelo'>Editar</button>
+                        <button class='amarelo'>Editar</button>
                         <button class='vermelho'>Deletar</button>
                     </td>
                                        
