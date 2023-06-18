@@ -1,9 +1,6 @@
 var listaRegistros = {
     UltimoIdGerado:0,
-    usuarios:[
-        
-
-    ]
+    usuarios:[]
 }
 
 
