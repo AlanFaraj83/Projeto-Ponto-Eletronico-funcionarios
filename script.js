@@ -70,7 +70,7 @@ function limparEdicao() {
 }
 
 
-function visualizar(pagina, novo=false) {
+function visualizar(pagina, novo=false,id=null) {
     document.body.setAttribute('page',pagina);
     if(pagina === 'cadastro') {
         if(novo) limparEdicao()
