@@ -60,9 +60,9 @@ function submeter(e) {
         saida: document.getElementById('timeout').value,
     }
     if(data.id) {
-        
+        editUsuario(...data)
     }else {
-        
+        insertUsuario(data.nome,data.entrada,data.saidalanche,data.voltalanche,data.saida)
     }
 }
 
