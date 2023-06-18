@@ -1,14 +1,19 @@
+const KEY_BD = '@usuariosestudo'
+
 var listaRegistros = {
     UltimoIdGerado:0,
     usuarios:[]
 }
 
 function gravarBD() {
-    localStorage.setItem()
+    localStorage.setItem(KEY_BD, JSON.stringify(listaRegistros))
 }
 
 function lerBD () {
-
+    const data =  localStorage.getItem(KEY_BD)
+    if(data) {
+        listaRegistros = JSON.parse(data)
+    }
 }
 
 
