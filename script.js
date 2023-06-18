@@ -44,7 +44,7 @@ function insertUsuario(nome,entrada,saidalanche,voltalanche,saida) {
     listaRegistros.usuarios.push({
         id,nome,entrada,saidalanche,voltalanche,saida
     })
-
+    gravarBD()
     desenhar()
     visualizar('lista')
 }
@@ -91,6 +91,6 @@ function submeter(e) {
 }
 
 window.addEventListener('load', () => {
-    desenhar()
+    lerBD()
     document.getElementById('cadastroRegistro').addEventListener('submit',submeter)
 })
