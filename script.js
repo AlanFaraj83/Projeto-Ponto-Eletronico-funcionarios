@@ -57,6 +57,14 @@ function deleteUsuario(id) {
 
 }
 
+function limparEdicao() {
+    document.getElementById("nome").innerHTML= ''
+    document.getElementById("entrada").innerHTML= ''
+    document.getElementById("saidalanche").innerHTML=''
+    document.getElementById("voltalanche").innerHTML=''
+    document.getElementById("saida").innerHTML=''
+}
+
 
 function visualizar(pagina) {
     document.body.setAttribute('page',pagina);
