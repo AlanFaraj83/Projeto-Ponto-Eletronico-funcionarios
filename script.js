@@ -49,7 +49,7 @@ function visualizar(pagina) {
 function submeter(e) {
     e.preventDefault()
     const data = {
-        id: document.getElementById('id').value,
+        id: document.getElementById('id').value || listaRegistros.UltimoIdGerado + 1,
         nome: document.getElementById('nome').value,
         entrada: document.getElementById('timein').value,
         saidalanche: document.getElementById('lunchout').value,
