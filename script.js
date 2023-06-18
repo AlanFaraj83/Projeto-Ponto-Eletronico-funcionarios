@@ -3,6 +3,14 @@ var listaRegistros = {
     usuarios:[]
 }
 
+function gravarBD() {
+    localStorage.setItem()
+}
+
+function lerBD () {
+
+}
+
 
 function desenhar() {
     const tbody = document.getElementById("listaRegistrosBody")
