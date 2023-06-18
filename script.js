@@ -19,25 +19,30 @@ function desenhar() {
             return `<tr>
                     <td>${usuario.id}</td>
                     <td>${usuario.nome}</td>
+                    <td>${usuario.entrada}</td>
+                    <td>${usuario.saidalanche}</td>
+                    <td>${usuario.voltalanche}</td>
+                    <td>${usuario.saida}</td>
+                                       
                 </tr>`
         }).join('')
     }
 }
-function insertUsuario(nome) {
-    const ID =listaRegistros.UltimoIdGerado + 1;
+function insertUsuario(nome,entrada,saidalanche,voltalanche,saida) {
+    const id =listaRegistros.UltimoIdGerado + 1;
     listaRegistros.usuarios.push({
-        ID,nome
+        id,nome,entrada,saidalanche,voltalanche,saida
     })
 
     desenhar()
     visualizar('lista')
 }
 
-function editUsuario(ID,nome) {
+function editUsuario(id,nome,entrada,saidalanche,voltalanche,saida) {
 
 }
 
-function deleteUsuario(ID) {
+function deleteUsuario(id) {
 
 }
 
@@ -46,6 +51,14 @@ function visualizar(pagina) {
     document.body.setAttribute('page',pagina);
     if(pagina === 'cadastro') {
         document.getElementById("nome").focus()
+        document.getElementById("entrada").focus()
+        document.getElementById("saidalanche").focus()
+        document.getElementById("voltalanche").focus()
+        document.getElementById("saida").focus()
+        
+        
+        
+        
     }
 }
 
