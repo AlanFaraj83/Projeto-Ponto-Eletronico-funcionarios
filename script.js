@@ -33,6 +33,10 @@ function desenhar() {
                     <td>${usuario.saidalanche}</td>
                     <td>${usuario.voltalanche}</td>
                     <td>${usuario.saida}</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Deletar</button>
+                    </td>
                                        
                 </tr>`
         }).join('')
