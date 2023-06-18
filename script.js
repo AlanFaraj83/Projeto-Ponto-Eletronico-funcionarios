@@ -48,7 +48,15 @@ function visualizar(pagina) {
 
 function submeter(e) {
     e.preventDefault()
-    alert('ok')
+    const data = {
+        id: document.getElementById('id').value,
+        nome: document.getElementById('nome').value,
+        entrada: document.getElementById('timein').value,
+        saidalanche: document.getElementById('lunchout').value,
+        voltalanche: document.getElementById('lunchback').value,
+        saida: document.getElementById('timeout').value,
+    }
+    console.log(data);
 }
 
 window.addEventListener('load', () => {
