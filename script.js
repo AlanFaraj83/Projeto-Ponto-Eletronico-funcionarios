@@ -1,8 +1,7 @@
 var listaRegistros = {
     UltimoIdGerado:0,
     usuarios:[
-        {id:1,nome:'Cassio'},
-        {id:2,nome:'Leandro'}
+        
 
     ]
 }
