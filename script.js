@@ -14,6 +14,7 @@ function lerBD () {
     if(data) {
         listaRegistros = JSON.parse(data)
     }
+    desenhar()
 }
 
 
