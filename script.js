@@ -28,6 +28,9 @@ function insertUsuario(nome) {
     listaRegistros.usuarios.push({
         ID,nome
     })
+
+    desenhar()
+    visualizar('lista')
 }
 
 function editUsuario(ID,nome) {
@@ -49,14 +52,16 @@ function visualizar(pagina) {
 function submeter(e) {
     e.preventDefault()
     const data = {
-        id: document.getElementById('id').value || listaRegistros.UltimoIdGerado + 1,
+        id: document.getElementById('id').value,
         nome: document.getElementById('nome').value,
         entrada: document.getElementById('timein').value,
         saidalanche: document.getElementById('lunchout').value,
         voltalanche: document.getElementById('lunchback').value,
         saida: document.getElementById('timeout').value,
     }
-    console.log(data);
+    if(data) {
+        
+    }
 }
 
 window.addEventListener('load', () => {
