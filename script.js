@@ -58,11 +58,11 @@ function deleteUsuario(id) {
 }
 
 function limparEdicao() {
-    document.getElementById("nome").value= ''
-    document.getElementById("entrada").value= ''
-    document.getElementById("saidalanche").value=''
-    document.getElementById("voltalanche").value=''
-    document.getElementById("saida").value=''
+    document.getElementById("nome").value = ''
+    document.getElementById("entrada").value = ''
+    document.getElementById("saidalanche").value =''
+    document.getElementById("voltalanche").value =''
+    document.getElementById("saida").value =''
 }
 
 
