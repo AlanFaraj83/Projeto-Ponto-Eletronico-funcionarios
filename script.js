@@ -66,9 +66,10 @@ function limparEdicao() {
 }
 
 
-function visualizar(pagina) {
+function visualizar(pagina, novo=false) {
     document.body.setAttribute('page',pagina);
     if(pagina === 'cadastro') {
+        if(novo) limparEdicao()
         document.getElementById("nome").focus()
         document.getElementById("entrada").focus()
         document.getElementById("saidalanche").focus()
