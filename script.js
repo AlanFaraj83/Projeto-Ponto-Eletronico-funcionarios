@@ -74,6 +74,9 @@ function visualizar(pagina, novo=false,id=null) {
     document.body.setAttribute('page',pagina);
     if(pagina === 'cadastro') {
         if(novo) limparEdicao()
+        if(id) {
+            
+        }
         document.getElementById("nome").focus()
         document.getElementById("entrada").focus()
         document.getElementById("saidalanche").focus()
