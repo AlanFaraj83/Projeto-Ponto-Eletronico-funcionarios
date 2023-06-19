@@ -75,7 +75,7 @@ function visualizar(pagina, novo=false,id=null) {
     if(pagina === 'cadastro') {
         if(novo) limparEdicao()
         if(id) {
-            
+            const usuario = listaRegistros.usuarios.find()
         }
         document.getElementById("nome").focus()
         document.getElementById("entrada").focus()
