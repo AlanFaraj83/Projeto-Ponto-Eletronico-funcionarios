@@ -35,7 +35,7 @@ function desenhar() {
                     <td>${usuario.saida}</td>
                     <td>
                         <button class='azul' onclick='visualizar("cadastro",false,${usuario.id})'>Editar</button>
-                        <button class='vermelho'>Deletar</button>
+                        <button class='vermelho'onclick='perguntarSeDeleta(${usuario.id})'>Deletar</button>
                     </td>
                                        
                 </tr>`
