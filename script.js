@@ -58,13 +58,16 @@ function editUsuario(id,nome,entrada,saidalanche,voltalanche,saida) {
 }
 
 function deleteUsuario(id) {
-
+        listaRegistros.usuarios = listaRegistros.usuarios.filter( usuario => {
+            return usuario.id != id
+        })
+        desenhar()
 }
 
 function perguntarSeDeleta(id) {
     if(confirm('Quer deletar o registro de id: '+id)) {
         deleteUsuario(id)
-        desenhar()
+        
     }
 }
 
