@@ -77,6 +77,7 @@ function visualizar(pagina, novo=false,id=null) {
         if(id) {
             const usuario = listaRegistros.usuarios.find(usuario => usuario.id == id)
             if(usuario) {
+                document.getElementById("id").value = usuario.id
                 document.getElementById("nome").value = usuario.nome
                 document.getElementById("entrada").value = usuario.entrada
                 document.getElementById("saidalanche").value = usuario.saidalanche
