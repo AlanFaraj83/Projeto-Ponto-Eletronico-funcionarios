@@ -64,6 +64,7 @@ function deleteUsuario(id) {
 function perguntarSeDeleta(id) {
     if(confirm('Quer deletar o registro de id: '+id)) {
         deleteUsuario(id)
+        desenhar()
     }
 }
 
