@@ -61,8 +61,8 @@ function deleteUsuario(id) {
 
 }
 
-function perguntarSeDeleta() {
-    
+function perguntarSeDeleta(id) {
+    if(confirm('Quer deletar o registro de id: '+id))
 }
 
 function limparEdicao() {
