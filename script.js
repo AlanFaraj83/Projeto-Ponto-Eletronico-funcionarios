@@ -77,11 +77,11 @@ function visualizar(pagina, novo=false,id=null) {
         if(id) {
             const usuario = listaRegistros.usuarios.find(usuario => usuario.id == id)
             if(usuario) {
-                document.getElementById("nome").value = ''
-                document.getElementById("entrada").value = ''
-                document.getElementById("saidalanche").value =''
-                document.getElementById("voltalanche").value =''
-                document.getElementById("saida").value =''
+                document.getElementById("nome").value = usuario.nome
+                document.getElementById("entrada").value = usuario.entrada
+                document.getElementById("saidalanche").value = usuario.saidalanche
+                document.getElementById("voltalanche").value = usuario.voltalanche
+                document.getElementById("saida").value = usuario.saida
             }
         }
         document.getElementById("nome").focus()
