@@ -61,6 +61,7 @@ function deleteUsuario(id) {
         listaRegistros.usuarios = listaRegistros.usuarios.filter( usuario => {
             return usuario.id != id
         })
+        gravarBD()
         desenhar()
 }
 
