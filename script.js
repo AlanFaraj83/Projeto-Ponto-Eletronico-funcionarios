@@ -76,6 +76,13 @@ function visualizar(pagina, novo=false,id=null) {
         if(novo) limparEdicao()
         if(id) {
             const usuario = listaRegistros.usuarios.find(usuario => usuario.id == id)
+            if(usuario) {
+                document.getElementById("nome").value = ''
+                document.getElementById("entrada").value = ''
+                document.getElementById("saidalanche").value =''
+                document.getElementById("voltalanche").value =''
+                document.getElementById("saida").value =''
+            }
         }
         document.getElementById("nome").focus()
         document.getElementById("entrada").focus()
