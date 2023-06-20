@@ -61,6 +61,10 @@ function deleteUsuario(id) {
 
 }
 
+function perguntarSeDeleta() {
+    
+}
+
 function limparEdicao() {
     document.getElementById("nome").value = ''
     document.getElementById("entrada").value = ''
