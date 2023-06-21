@@ -28,7 +28,7 @@ function desenhar() {
         .map(usuario => {
             return `<tr>
                     <td>${usuario.id}</td>
-                    <td>${usuario.dating}</td>
+                    <td>${usuario.dia}</td>
                     <td>${usuario.nome}</td>
                     <td>${usuario.entrada}</td>
                     <td>${usuario.saidalanche}</td>
@@ -43,18 +43,18 @@ function desenhar() {
         }).join('')
     }
 }
-function insertUsuario(dating,nome,entrada,saidalanche,voltalanche,saida) {
+function insertUsuario(dia,nome,entrada,saidalanche,voltalanche,saida) {
     const id =listaRegistros.UltimoIdGerado + 1;
     listaRegistros.UltimoIdGerado = id
     listaRegistros.usuarios.push({
-        id,dating,nome,entrada,saidalanche,voltalanche,saida
+        id,dia,nome,entrada,saidalanche,voltalanche,saida
     })
     gravarBD()
     desenhar()
     visualizar('lista')
 }
 
-function editUsuario(id,dating,nome,entrada,saidalanche,voltalanche,saida) {
+function editUsuario(id,dia,nome,entrada,saidalanche,voltalanche,saida) {
 
 }
 
@@ -74,7 +74,7 @@ function perguntarSeDeleta(id) {
 }
 
 function limparEdicao() {
-    document.getElementById("dating").value = ''
+    document.getElementById("dia").value = ''
     document.getElementById("nome").value = ''
     document.getElementById("entrada").value = ''
     document.getElementById("saidalanche").value =''
@@ -91,7 +91,7 @@ function visualizar(pagina, novo=false,id=null) {
             const usuario = listaRegistros.usuarios.find(usuario => usuario.id == id)
             if(usuario) {
                 document.getElementById("id").value = usuario.id
-                document.getElementById("dating").value = usuario.dating
+                document.getElementById("dia").value = usuario.dia
                 document.getElementById("nome").value = usuario.nome
                 document.getElementById("entrada").value = usuario.entrada
                 document.getElementById("saidalanche").value = usuario.saidalanche
@@ -99,7 +99,7 @@ function visualizar(pagina, novo=false,id=null) {
                 document.getElementById("saida").value = usuario.saida
             }
         }
-        document.getElementById("dating").focus()
+        document.getElementById("dia").focus()
         document.getElementById("nome").focus()
         document.getElementById("entrada").focus()
         document.getElementById("saidalanche").focus()
@@ -116,7 +116,7 @@ function submeter(e) {
     e.preventDefault()
     const data = {
         id: document.getElementById('id').value,
-        dating:document.getElementById('dating').value,
+        dia:document.getElementById('dia').value,
         nome: document.getElementById('nome').value,
         entrada: document.getElementById('timein').value,
         saidalanche: document.getElementById('lunchout').value,
@@ -126,7 +126,7 @@ function submeter(e) {
     if(data.id) {
         editUsuario(...data)
     }else {
-        insertUsuario(data.dating,data.nome,data.entrada,data.saidalanche,data.voltalanche,data.saida)
+        insertUsuario(data.dia,data.nome,data.entrada,data.saidalanche,data.voltalanche,data.saida)
     }
 }
 
