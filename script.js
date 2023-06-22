@@ -46,7 +46,7 @@ function insertUsuario(nome,entrada,saidalanche,voltalanche,saida) {
     const id =listaRegistros.UltimoIdGerado + 1;
     listaRegistros.UltimoIdGerado = id
     listaRegistros.usuarios.push({
-        id,nome,dia,entrada,saidalanche,voltalanche,saida
+        id,nome,entrada,saidalanche,voltalanche,saida
     })
     gravarBD()
     desenhar()
@@ -62,6 +62,7 @@ function editUsuario(id,nome,entrada,saidalanche,voltalanche,saida) {
     usuario.saida = saida;
     gravarBD()
     desenhar()
+    visualizar()
 }
 
 function deleteUsuario(id) {
