@@ -28,6 +28,7 @@ function desenhar() {
         .map(usuario => {
             return `<tr>
                     <td>${usuario.id}</td>
+                    <td>${usuario.date}</td>
                     <td>${usuario.nome}</td>
                     <td>${usuario.entrada}</td>
                     <td>${usuario.saidalanche}</td>
@@ -42,19 +43,20 @@ function desenhar() {
         }).join('')
     }
 }
-function insertUsuario(nome,entrada,saidalanche,voltalanche,saida) {
+function insertUsuario(date,nome,entrada,saidalanche,voltalanche,saida) {
     const id =listaRegistros.UltimoIdGerado + 1;
     listaRegistros.UltimoIdGerado = id
     listaRegistros.usuarios.push({
-        id,nome,entrada,saidalanche,voltalanche,saida
+        id,date,nome,entrada,saidalanche,voltalanche,saida
     })
     gravarBD()
     desenhar()
     visualizar('lista')
 }
 
-function editUsuario(id,nome,entrada,saidalanche,voltalanche,saida) {
+function editUsuario(id,date,nome,entrada,saidalanche,voltalanche,saida) {
     var usuario = listaRegistros.usuarios.find(usuario => usuario.id == id)
+    usuario.date = date;
     usuario.nome = nome;
     usuario.entrada = entrada;
     usuario.saidalanche = saidalanche;
@@ -81,6 +83,7 @@ function perguntarSeDeleta(id) {
 }
 
 function limparEdicao() {
+    document.getElementById("date").value = ''
     document.getElementById("nome").value = ''
     document.getElementById("entrada").value = ''
     document.getElementById("saidalanche").value =''
@@ -97,6 +100,7 @@ function visualizar(pagina, novo=false,id=null) {
             const usuario = listaRegistros.usuarios.find(usuario => usuario.id == id)
             if(usuario) {
                 document.getElementById("id").value = usuario.id
+                document.getElementById("date").value = usuario.date
                 document.getElementById("nome").value = usuario.nome
                 document.getElementById("entrada").value = usuario.entrada
                 document.getElementById("saidalanche").value = usuario.saidalanche
@@ -104,6 +108,7 @@ function visualizar(pagina, novo=false,id=null) {
                 document.getElementById("saida").value = usuario.saida
             }
         }
+        document.getElementById("date").focus()
         document.getElementById("nome").focus()
         document.getElementById("entrada").focus()
         document.getElementById("saidalanche").focus()
@@ -120,6 +125,7 @@ function submeter(e) {
     e.preventDefault()
     const data = {
         id: document.getElementById('id').value,
+        date: document.getElementById('date').value,
         nome: document.getElementById('nome').value,
         entrada: document.getElementById('timein').value,
         saidalanche: document.getElementById('lunchout').value,
@@ -127,9 +133,9 @@ function submeter(e) {
         saida: document.getElementById('timeout').value,
     }
     if(data.id) {
-        editUsuario(data.id,data.nome,data.entrada,data.saidalanche,data.voltalanche,data.saida)
+        editUsuario(data.id,data.date,data.nome,data.entrada,data.saidalanche,data.voltalanche,data.saida)
     }else {
-        insertUsuario(data.nome,data.entrada,data.saidalanche,data.voltalanche,data.saida)
+        insertUsuario(data.date,data.nome,data.entrada,data.saidalanche,data.voltalanche,data.saida)
     }
 }
 
