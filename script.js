@@ -60,7 +60,8 @@ function editUsuario(id,nome,entrada,saidalanche,voltalanche,saida) {
     usuario.saidalanche = saidalanche;
     usuario.voltalanche = voltalanche;
     usuario.saida = saida;
-    gravarBD();
+    gravarBD()
+    desenhar()
 }
 
 function deleteUsuario(id) {
