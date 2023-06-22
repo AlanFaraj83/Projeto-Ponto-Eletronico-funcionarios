@@ -99,8 +99,8 @@ function visualizar(pagina, novo=false,id=null) {
                 document.getElementById("saida").value = usuario.saida
             }
         }
-        document.getElementById("dia").focus()
         document.getElementById("nome").focus()
+        document.getElementById("dia").focus()
         document.getElementById("entrada").focus()
         document.getElementById("saidalanche").focus()
         document.getElementById("voltalanche").focus()
@@ -116,8 +116,8 @@ function submeter(e) {
     e.preventDefault()
     const data = {
         id: document.getElementById('id').value,
-        dia:document.getElementById('dia').value,
         nome: document.getElementById('nome').value,
+        dia:document.getElementById('dia').value,
         entrada: document.getElementById('timein').value,
         saidalanche: document.getElementById('lunchout').value,
         voltalanche: document.getElementById('lunchback').value,
@@ -126,7 +126,7 @@ function submeter(e) {
     if(data.id) {
         editUsuario(...data)
     }else {
-        insertUsuario(data.dia,data.nome,data.entrada,data.saidalanche,data.voltalanche,data.saida)
+        insertUsuario(data.nome,data.dia,data.entrada,data.saidalanche,data.voltalanche,data.saida)
     }
 }
 
