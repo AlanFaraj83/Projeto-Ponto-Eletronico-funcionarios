@@ -29,7 +29,6 @@ function desenhar() {
             return `<tr>
                     <td>${usuario.id}</td>
                     <td>${usuario.nome}</td>
-                    <td>${usuario.dia}</td>
                     <td>${usuario.entrada}</td>
                     <td>${usuario.saidalanche}</td>
                     <td>${usuario.voltalanche}</td>
@@ -43,7 +42,7 @@ function desenhar() {
         }).join('')
     }
 }
-function insertUsuario(dia,nome,entrada,saidalanche,voltalanche,saida) {
+function insertUsuario(nome,entrada,saidalanche,voltalanche,saida) {
     const id =listaRegistros.UltimoIdGerado + 1;
     listaRegistros.UltimoIdGerado = id
     listaRegistros.usuarios.push({
@@ -54,7 +53,7 @@ function insertUsuario(dia,nome,entrada,saidalanche,voltalanche,saida) {
     visualizar('lista')
 }
 
-function editUsuario(id,nome,dia,entrada,saidalanche,voltalanche,saida) {
+function editUsuario(id,nome,entrada,saidalanche,voltalanche,saida) {
 
 }
 
@@ -75,7 +74,6 @@ function perguntarSeDeleta(id) {
 
 function limparEdicao() {
     document.getElementById("nome").value = ''
-    document.getElementById("dia").value = ''
     document.getElementById("entrada").value = ''
     document.getElementById("saidalanche").value =''
     document.getElementById("voltalanche").value =''
@@ -92,7 +90,6 @@ function visualizar(pagina, novo=false,id=null) {
             if(usuario) {
                 document.getElementById("id").value = usuario.id
                 document.getElementById("nome").value = usuario.nome
-                document.getElementById("dia").value = usuario.dia
                 document.getElementById("entrada").value = usuario.entrada
                 document.getElementById("saidalanche").value = usuario.saidalanche
                 document.getElementById("voltalanche").value = usuario.voltalanche
@@ -100,7 +97,6 @@ function visualizar(pagina, novo=false,id=null) {
             }
         }
         document.getElementById("nome").focus()
-        document.getElementById("dia").focus()
         document.getElementById("entrada").focus()
         document.getElementById("saidalanche").focus()
         document.getElementById("voltalanche").focus()
@@ -117,16 +113,15 @@ function submeter(e) {
     const data = {
         id: document.getElementById('id').value,
         nome: document.getElementById('nome').value,
-        dia:document.getElementById('dia').value,
         entrada: document.getElementById('timein').value,
         saidalanche: document.getElementById('lunchout').value,
         voltalanche: document.getElementById('lunchback').value,
         saida: document.getElementById('timeout').value,
     }
     if(data.id) {
-        editUsuario(...data)
+        editUsuario(data.id,data.nome,data.entrada,data.saidalanche,data.voltalanche,data.saida)
     }else {
-        insertUsuario(data.nome,data.dia,data.entrada,data.saidalanche,data.voltalanche,data.saida)
+        insertUsuario(data.nome,data.entrada,data.saidalanche,data.voltalanche,data.saida)
     }
 }
 
