@@ -91,8 +91,8 @@ function visualizar(pagina, novo=false,id=null) {
             const usuario = listaRegistros.usuarios.find(usuario => usuario.id == id)
             if(usuario) {
                 document.getElementById("id").value = usuario.id
-                document.getElementById("dia").value = usuario.dia
                 document.getElementById("nome").value = usuario.nome
+                document.getElementById("dia").value = usuario.dia
                 document.getElementById("entrada").value = usuario.entrada
                 document.getElementById("saidalanche").value = usuario.saidalanche
                 document.getElementById("voltalanche").value = usuario.voltalanche
