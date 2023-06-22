@@ -28,8 +28,8 @@ function desenhar() {
         .map(usuario => {
             return `<tr>
                     <td>${usuario.id}</td>
-                    <td>${usuario.dia}</td>
                     <td>${usuario.nome}</td>
+                    <td>${usuario.dia}</td>
                     <td>${usuario.entrada}</td>
                     <td>${usuario.saidalanche}</td>
                     <td>${usuario.voltalanche}</td>
@@ -47,14 +47,14 @@ function insertUsuario(dia,nome,entrada,saidalanche,voltalanche,saida) {
     const id =listaRegistros.UltimoIdGerado + 1;
     listaRegistros.UltimoIdGerado = id
     listaRegistros.usuarios.push({
-        id,dia,nome,entrada,saidalanche,voltalanche,saida
+        id,nome,dia,entrada,saidalanche,voltalanche,saida
     })
     gravarBD()
     desenhar()
     visualizar('lista')
 }
 
-function editUsuario(id,dia,nome,entrada,saidalanche,voltalanche,saida) {
+function editUsuario(id,nome,dia,entrada,saidalanche,voltalanche,saida) {
 
 }
 
@@ -74,8 +74,8 @@ function perguntarSeDeleta(id) {
 }
 
 function limparEdicao() {
-    document.getElementById("dia").value = ''
     document.getElementById("nome").value = ''
+    document.getElementById("dia").value = ''
     document.getElementById("entrada").value = ''
     document.getElementById("saidalanche").value =''
     document.getElementById("voltalanche").value =''
