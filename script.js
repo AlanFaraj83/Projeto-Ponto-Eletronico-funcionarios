@@ -62,7 +62,7 @@ function editUsuario(id,nome,entrada,saidalanche,voltalanche,saida) {
     usuario.saida = saida;
     gravarBD()
     desenhar()
-    visualizar()
+    visualizar('lista')
 }
 
 function deleteUsuario(id) {
