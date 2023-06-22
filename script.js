@@ -54,7 +54,7 @@ function insertUsuario(nome,entrada,saidalanche,voltalanche,saida) {
 }
 
 function editUsuario(id,nome,entrada,saidalanche,voltalanche,saida) {
-
+    var usuario = listaRegistros.usuarios.find(usuario => usuario.id == id)
 }
 
 function deleteUsuario(id) {
