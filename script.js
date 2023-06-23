@@ -58,7 +58,7 @@ function insertUsuario(date,nome,entrada,saidalanche,voltalanche,saida) {
 
 function editUsuario(id,date,nome,entrada,saidalanche,voltalanche,saida) {
     var usuario = listaRegistros.usuarios.find(usuario => usuario.id == id)
-    usuario.date = date;
+    usuario.date = date
     usuario.nome = nome;
     usuario.entrada = entrada;
     usuario.saidalanche = saidalanche;
