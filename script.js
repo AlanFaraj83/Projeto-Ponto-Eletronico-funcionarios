@@ -45,8 +45,8 @@ function desenhar() {
                     </td>
                                        
                 </tr>`
-            }).join('')
-       tbody.innerHTML =
+            })
+       tbody.innerHTML = data.join('')
     }
 }
 function insertUsuario(date,nome,entrada,saidalanche,voltalanche,saida) {
