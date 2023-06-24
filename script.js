@@ -26,12 +26,12 @@ function desenhar() {
     const tbody = document.getElementById("listaRegistrosBody")
     if(tbody) {
         var data = listaRegistros.usuarios
-        data = listaRegistros.usuarios
-        .sort((a, b) => {
+      data = listaRegistros.usuarios
+          .sort((a, b) => {
             return a.nome < b.nome ? -1 : 1
-        })
-        .map(usuario => {
-            return `<tr>
+          })
+          .map(usuario => {
+             return `<tr>
                     <td>${usuario.id}</td>
                     <td>${usuario.date}</td>
                     <td>${usuario.nome}</td>
@@ -45,7 +45,8 @@ function desenhar() {
                     </td>
                                        
                 </tr>`
-        }).join('')
+            }).join('')
+       tbody.innerHTML =
     }
 }
 function insertUsuario(date,nome,entrada,saidalanche,voltalanche,saida) {
