@@ -6,6 +6,8 @@ var listaRegistros = {
     usuarios:[]
 }
 
+var FILTRO =''
+
 
 function gravarBD() {
     localStorage.setItem(KEY_BD, JSON.stringify(listaRegistros))
