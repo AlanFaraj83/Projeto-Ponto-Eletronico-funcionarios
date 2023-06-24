@@ -25,7 +25,8 @@ function lerBD () {
 function desenhar() {
     const tbody = document.getElementById("listaRegistrosBody")
     if(tbody) {
-        var data = listaRegistros.usuarios
+      var data = listaRegistros.usuarios;
+      if(FILTRO.trim())
       data = listaRegistros.usuarios
           .sort((a, b) => {
             return a.nome < b.nome ? -1 : 1
