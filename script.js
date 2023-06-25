@@ -27,7 +27,7 @@ function desenhar() {
     if(tbody) {
       var data = listaRegistros.usuarios;
       if(FILTRO.trim()) {
-        
+        const exReg = eval(``)
       }
       data = listaRegistros.usuarios
           .sort((a, b) => {
