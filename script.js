@@ -28,7 +28,9 @@ function desenhar() {
       var data = listaRegistros.usuarios;
       if(FILTRO.trim()) {
         const exReg = eval(`/${FILTRO.trim().replace(/[^\d\w]+/g,'.*')}/i`)
-        data = data.filter()
+        data = data.filter(usuario => {
+            return exReg
+        })
       }
       data = listaRegistros.usuarios
           .sort((a, b) => {
