@@ -29,7 +29,7 @@ function desenhar() {
       if(FILTRO.trim()) {
         const exReg = eval(`/${FILTRO.trim().replace(/[^\d\w]+/g,'.*')}/i`)
         data = data.filter(usuario => {
-            return exReg
+            return exReg.test(usuario.date) || exReg.test(usuario.nome)
         })
       }
       data = listaRegistros.usuarios
