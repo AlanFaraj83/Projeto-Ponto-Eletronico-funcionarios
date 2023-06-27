@@ -32,6 +32,7 @@ function desenhar() {
     if(tbody) {
       var data = listaRegistros.usuarios;
       if(FILTRO.trim()) {
+        FILTRO = FILTRO.replace
         const exReg = eval(`/${FILTRO.trim().replace(/[^\d\w]+/g,'.*')}/i`)
         data = data.filter(usuario => {
             return exReg.test(usuario.date) || exReg.test(usuario.nome)
