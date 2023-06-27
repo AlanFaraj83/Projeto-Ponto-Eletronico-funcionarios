@@ -21,8 +21,8 @@ function lerBD () {
     desenhar()
 }
 
-function pesquisar() {
-    
+function pesquisar(value) {
+
 }
 
 
