@@ -22,7 +22,8 @@ function lerBD () {
 }
 
 function pesquisar(value) {
-    FILTRO
+    FILTRO = value;
+    desenhar()
 }
 
 
