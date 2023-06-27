@@ -21,6 +21,10 @@ function lerBD () {
     desenhar()
 }
 
+function pesquisar() {
+    
+}
+
 
 function desenhar() {
     const tbody = document.getElementById("listaRegistrosBody")
