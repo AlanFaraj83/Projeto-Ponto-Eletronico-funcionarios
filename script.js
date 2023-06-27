@@ -160,7 +160,7 @@ window.addEventListener('load', () => {
     lerBD()
     document.getElementById('cadastroRegistro').addEventListener('submit',submeter)
     document.getElementById('inputPesquisa').addEventListener('change',e => {
-        
+        pesquisar(e.target.value)
     })
 })
 
