@@ -37,7 +37,7 @@ function desenhar() {
             return exReg.test(usuario.date) || exReg.test(usuario.nome)
         })
       }
-      data = data.usuarios
+      data = data
           .sort((a, b) => {
             return a.nome < b.nome ? -1 : 1
           })
