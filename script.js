@@ -159,7 +159,7 @@ function submeter(e) {
 window.addEventListener('load', () => {
     lerBD()
     document.getElementById('cadastroRegistro').addEventListener('submit',submeter)
-    document.getElementById('inputPesquisa').addEventListener('change',e => {
+    document.getElementById('inputPesquisa').addEventListener('keyup',e => {
         pesquisar(e.target.value)
     })
 })
