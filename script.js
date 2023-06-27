@@ -22,7 +22,7 @@ function lerBD () {
 }
 
 function pesquisar(value) {
-
+    FILTRO
 }
 
 
