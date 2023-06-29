@@ -172,7 +172,8 @@ $(document).ready(function() {
         e.preventDefault();
 
         var divTabela = document.getElementById('#divTabela');
-        var dados = new Blob(['\ufeff' + divTabela.outerHTML],{type:'application/vnd.ms-excel'});
+        var Dados = new Blob(['\ufeff' + divTabela.outerHTML],{type:'application/vnd.ms-excel'});
+        var url = Window.URL.createObjectURL(Dados);
 
     })    
 
