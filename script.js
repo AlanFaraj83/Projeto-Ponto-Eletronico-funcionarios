@@ -179,6 +179,8 @@ $(document).ready(function() {
 
         a.href = url;
 
+        a.download = 'Dados Pedidos'
+
     })    
 
 
