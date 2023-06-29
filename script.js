@@ -175,6 +175,8 @@ $(document).ready(function() {
         var Dados = new Blob(['\ufeff' + divTabela.outerHTML],{type:'application/vnd.ms-excel'});
         var url = Window.URL.createObjectURL(Dados);
 
+        var a = document.createElement('a');
+
     })    
 
 
