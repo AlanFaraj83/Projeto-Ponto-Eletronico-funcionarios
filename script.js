@@ -167,4 +167,11 @@ window.addEventListener('load', () => {
 
 // função para exportar em excel
 
+$(document).ready(function() {
+$("#btn1").click(function(e) {
 
+    e.preventDefault();
+})    
+
+
+})
