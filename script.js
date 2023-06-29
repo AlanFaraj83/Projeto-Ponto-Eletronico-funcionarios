@@ -168,10 +168,13 @@ window.addEventListener('load', () => {
 // função para exportar em excel
 
 $(document).ready(function() {
-$("#btn1").click(function(e) {
+    $("#btn1").click(function(e) {
+        e.preventDefault();
 
-    e.preventDefault();
-})    
+        var divTabela = document.getElementById('#divTabela');
+        var dados = new Blob([''])
+
+    })    
 
 
 })
