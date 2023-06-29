@@ -164,3 +164,7 @@ window.addEventListener('load', () => {
     })
 })
 
+
+// função para exportar em excel
+
+
