@@ -164,6 +164,8 @@ window.addEventListener('load', () => {
     })
 })
 
-const exportBtn =document.querySelector('[data-js="export-table-btn"]')
+const exportBtn = document.querySelector('[data-js="export-table-btn"]')
+exportBtn.addEventListener('')
+console.log(exportBtn)
 
 
