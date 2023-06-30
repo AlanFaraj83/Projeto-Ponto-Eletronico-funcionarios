@@ -165,23 +165,5 @@ window.addEventListener('load', () => {
 })
 
 
-// função para exportar em excel
-
-$(document).ready(function() {
-    $("#btn1").click(function(e) {
-        e.preventDefault();
-
-        var divTabela = document.getElementById('#divTabela');
-        var Dados = new Blob(['\ufeff' + divTabela.outerHTML],{type:'application/vnd.ms-excel'});
-        var url = Window.URL.createObjectURL(Dados);
-
-        var a = document.createElement('a');
-
-        a.href = url;
-
-        a.download = 'Dados Pedidos'
-
-    })    
 
 
-})
