@@ -164,10 +164,6 @@ window.addEventListener('load', () => {
     })
 })
 
-const exportBtn = document.querySelector('[data-js="export-table-btn"]')
-exportBtn.addEventListener('click', ()=> {
-    
-})
-console.log(exportBtn)
+
 
 
