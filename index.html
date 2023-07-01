@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Ponto Eletronico Funcionários</title>
+    <script src="https://unpkg.com/xlsx@0.16.9/dist/xlsx.full.min.js"></script>
+    <script src="https://unpkg.com/file-saverjs@latest/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/tableexport@latest/dist/js/tableexport.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script type="text/javascript" src="script.js"></script>
     
 
@@ -86,7 +90,21 @@
 
         }
 
-        
+        #btnExportar {
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: brown;
+            color: #fff;
+            margin: 4px;
+            padding: 8.3px 15px;
+            transition: 0.5s;
+        }
+
+        #btnExportar:hover {
+            background-color: blue;
+            color: black;
+        }
 
         
 
@@ -106,7 +124,6 @@
 
 
     </style>
-    
 
 </head>
 <body page="lista">
@@ -120,7 +137,7 @@
 
         </div>
 
-        <table>
+        <table id="tabela">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -138,9 +155,12 @@
 
         <div>
             <button onclick="visualizar('cadastro',true)">Novo Funcionário</button>
+            <button id="btnExportar" class="btn btn-success"><i class="fas fa-file-excel"></i>Exportar Excel</button>
            
         </div>
     </div>
+
+    
   
     <form id="cadastroRegistro">
         <div class="label">
@@ -201,5 +221,22 @@
         </div>
  
     </form>
+
+    <script>
+        const $btnExportar = document.querySelector("#btnExportar"),
+        $tabela = document.querySelector("#tabela");
+
+        $btnExportar.addEventListener("click", function() {
+        let tableExport = new TableExport($tabela, {
+            exportButtons: false, // No queremos botones
+            filename: "Ponto Eletronico", //Nome do arquivo de Excel
+            sheetname: "Reporte de prueba", //Título de la hoja
+        });
+        let dados = tableExport.getExportData();
+        let preferenciasDocumento = dados.tabela.xlsx;
+        tableExport.export2file(preferenciasDocumento.data, preferenciasDocumento.mimeType, preferenciasDocumento.filename, preferenciasDocumento.fileExtension, preferenciasDocumento.merges, preferenciasDocumento.RTL, preferenciasDocumento.sheetname);
+    });
+    </script>
+
 </body>
 </html>
